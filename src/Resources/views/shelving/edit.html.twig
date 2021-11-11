@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Shelving{% endblock %}
+
+{% block body %}
+    <h1>Edit Shelving</h1>
+
+    {{ include('shelving/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('shelving_index') }}">back to list</a>
+
+    {{ include('shelving/_delete_form.html.twig') }}
+{% endblock %}

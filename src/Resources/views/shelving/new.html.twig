@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Shelving{% endblock %}
+
+{% block body %}
+    <h1>Create new Shelving</h1>
+
+    {{ include('shelving/_form.html.twig') }}
+
+    <a href="{{ path('shelving_index') }}">back to list</a>
+{% endblock %}

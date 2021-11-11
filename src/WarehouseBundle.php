@@ -14,6 +14,6 @@ class WarehouseBundle extends Bundle
 
     public static function getConfigName(): string
     {
-        return 'warehouse';
+        return 'martenasoft_warehouse';
     }
 }

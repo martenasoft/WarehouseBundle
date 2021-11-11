@@ -20,7 +20,7 @@ class WarehouseController extends AbstractController
      */
     public function index(WarehouseRepository $warehouseRepository): Response
     {
-        return $this->render('warehouse/index.html.twig', [
+        return $this->render('@Warehouse/warehouse/index.html.twig', [
             'warehouses' => $warehouseRepository->findAll(),
         ]);
     }
@@ -42,7 +42,7 @@ class WarehouseController extends AbstractController
             return $this->redirectToRoute('warehouse_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('warehouse/new.html.twig', [
+        return $this->renderForm('@Warehouse/warehouse/new.html.twig', [
             'warehouse' => $warehouse,
             'form' => $form,
         ]);
@@ -53,7 +53,7 @@ class WarehouseController extends AbstractController
      */
     public function show(Warehouse $warehouse): Response
     {
-        return $this->render('warehouse/show.html.twig', [
+        return $this->render('@Warehouse/warehouse/show.html.twig', [
             'warehouse' => $warehouse,
         ]);
     }
@@ -72,7 +72,7 @@ class WarehouseController extends AbstractController
             return $this->redirectToRoute('warehouse_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('warehouse/edit.html.twig', [
+        return $this->renderForm('@Warehouse/warehouse/edit.html.twig', [
             'warehouse' => $warehouse,
             'form' => $form,
         ]);

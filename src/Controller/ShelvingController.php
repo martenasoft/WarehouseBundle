@@ -20,7 +20,7 @@ class ShelvingController extends AbstractController
      */
     public function index(ShelvingRepository $shelvingRepository): Response
     {
-        return $this->render('shelving/index.html.twig', [
+        return $this->render('@Warehouse/shelving/index.html.twig', [
             'shelvings' => $shelvingRepository->findAll(),
         ]);
     }
@@ -42,7 +42,7 @@ class ShelvingController extends AbstractController
             return $this->redirectToRoute('shelving_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('shelving/new.html.twig', [
+        return $this->renderForm('@Warehouse/shelving/new.html.twig', [
             'shelving' => $shelving,
             'form' => $form,
         ]);
@@ -53,7 +53,7 @@ class ShelvingController extends AbstractController
      */
     public function show(Shelving $shelving): Response
     {
-        return $this->render('shelving/show.html.twig', [
+        return $this->render('@Warehouse/shelving/show.html.twig', [
             'shelving' => $shelving,
         ]);
     }
@@ -72,7 +72,7 @@ class ShelvingController extends AbstractController
             return $this->redirectToRoute('shelving_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('shelving/edit.html.twig', [
+        return $this->renderForm('@Warehouse/shelving/edit.html.twig', [
             'shelving' => $shelving,
             'form' => $form,
         ]);

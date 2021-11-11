@@ -1,6 +1,6 @@
 <?php
 
-    namespace MartenaSoft\Warehouse\DependencyInjection;
+namespace MartenaSoft\Warehouse\DependencyInjection;
 
 use MartenaSoft\Warehouse\WarehouseBundle;
 use Symfony\Component\Config\FileLocator;

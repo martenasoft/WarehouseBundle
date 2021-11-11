@@ -20,7 +20,7 @@ class BoxController extends AbstractController
      */
     public function index(BoxRepository $boxRepository): Response
     {
-        return $this->render('box/index.html.twig', [
+        return $this->render('@Warehouse/box/index.html.twig', [
             'boxes' => $boxRepository->findAll(),
         ]);
     }
@@ -42,7 +42,7 @@ class BoxController extends AbstractController
             return $this->redirectToRoute('box_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('box/new.html.twig', [
+        return $this->renderForm('@Warehouse/box/new.html.twig', [
             'box' => $box,
             'form' => $form,
         ]);
@@ -53,7 +53,7 @@ class BoxController extends AbstractController
      */
     public function show(Box $box): Response
     {
-        return $this->render('box/show.html.twig', [
+        return $this->render('@Warehouse/box/show.html.twig', [
             'box' => $box,
         ]);
     }
@@ -72,7 +72,7 @@ class BoxController extends AbstractController
             return $this->redirectToRoute('box_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('box/edit.html.twig', [
+        return $this->renderForm('@Warehouse/box/edit.html.twig', [
             'box' => $box,
             'form' => $form,
         ]);
